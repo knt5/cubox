@@ -1,0 +1,154 @@
+{{{nav}}}
+
+<div class="container-fluid container-fluid-body">
+	
+	<div class="alert alert-info">
+		iOS 6 以上が必要です。
+		<button type="button" class="close" data-dismiss="alert">×</button>
+	</div>
+	
+	<div class="editModeElement">
+		<!-- ============================ step1 ============================ -->
+		<span class="badge badge-success">Step.1 表を撮影</span><img src="img/sample1.png" class="sample"/>
+		<div id="step1" style="">
+			<input type="file" accept="image/*" id="imageFile1" class="" style="min-width:95%;" />
+			<button id="resetCuboid1" class="btn btn-inverse" type="button" style="margin-top:6px; margin-bottom:6px; display:none;">枠をリセット</button>
+			<button id="imageInfo1" class="btn btn-inverse" type="button" style="margin-top:6px; margin-bottom:6px; display:none;">画像情報</button>
+			<div id="preview1" class="unselectable preview">
+				<img id="image1" width="100%" class="unselectable" />
+			</div>
+			<canvas id="hiddenCanvas1" style="display:none;" />
+		</div>
+		
+		<!-- ============================ step2 ============================ -->
+		<br/>
+		<span class="badge badge-success">Step.2 裏を撮影</span><img src="img/sample2.png" class="sample"/>
+		<div id="step2" style="">
+			<input type="file" accept="image/*" id="imageFile2" class="" style="min-width:95%;" disabled />
+			<button id="resetCuboid2" class="btn btn-inverse" type="button" style="margin-top:6px; margin-bottom:6px; display:none;">枠をリセット</button>
+			<button id="imageInfo2" class="btn btn-inverse" type="button" style="margin-top:6px; margin-bottom:6px; display:none;">画像情報</button>
+			<div id="preview2" class="unselectable preview">
+				<img id="image2" width="100%" class="unselectable" />
+			</div>
+			<canvas id="hiddenCanvas2" style="display:none;" />
+		</div>
+	</div>
+	
+	<!-- ============================ step3 ============================ -->
+	<br/>
+	<span id="step3title" class="badge badge-success editModeElement" style="margin-bottom:2px;">Step.3 3Dデータ生成</span>
+	<div id="step3" style="">
+		<div class="editModeElement">
+			<button id="create3d" class="btn btn-large btn-primary" type="button" style="width:100%; margin-bottom:4px;" disabled>
+				3D データ生成
+			</button>
+		</div>
+		
+		<div id="adjustSize" class="viewModeElement" style="display:none;">
+			<select id="autoRotation" style="width:140px;">
+				<option value="true">自動回転する</option>
+				<option value="false">自動回転しない</option>
+			</select>
+			<br/>
+			<select id="cuboidWidth" style="width:95px;">
+				<option value="1"  >横 1</option>
+				<option value="10" >横 10</option>
+				<option value="20" >横 20</option>
+				<option value="50" >横 50</option>
+				<option value="100">横 100</option>
+				<option value="150">横 150</option>
+				<option value="200">横 200</option>
+				<option value="300">横 300</option>
+				<option value="400" selected>横 400</option>
+				<option value="500">横 500</option>
+				<option value="600">横 600</option>
+				<option value="700">横 700</option>
+				<option value="800">横 800</option>
+				<option value="900">横 900</option>
+			</select>
+			<select id="cuboidHeight" style="width:95px;">
+				<option value="1"  >縦 1</option>
+				<option value="10" >縦 10</option>
+				<option value="20" >縦 20</option>
+				<option value="50" >縦 50</option>
+				<option value="100">縦 100</option>
+				<option value="150">縦 150</option>
+				<option value="200">縦 200</option>
+				<option value="300">縦 300</option>
+				<option value="400">縦 400</option>
+				<option value="500">縦 500</option>
+				<option value="600" selected>縦 600</option>
+				<option value="700">縦 700</option>
+				<option value="800">縦 800</option>
+				<option value="900">縦 900</option>
+			</select>
+			<select id="cuboidDepth" style="width:110px;">
+				<option value="1"  >厚さ 1</option>
+				<option value="10" >厚さ 10</option>
+				<option value="20" >厚さ 20</option>
+				<option value="50" >厚さ 50</option>
+				<option value="100" selected>厚さ 100</option>
+				<option value="150">厚さ 150</option>
+				<option value="200">厚さ 200</option>
+				<option value="300">厚さ 300</option>
+				<option value="400">厚さ 400</option>
+				<option value="500">厚さ 500</option>
+				<option value="600">厚さ 600</option>
+				<option value="700">厚さ 700</option>
+				<option value="800">厚さ 800</option>
+				<option value="900">厚さ 900</option>
+			</select>
+		</div>
+		
+		<div id="viewModeCuboidInfo" class="viewModeElement" style="display:none;">
+		</div>
+		
+		<div id="preview3d">
+			<!-- 隠しキャンバス -->
+			<canvas id="texture0" style="display:none;" />
+			<canvas id="texture1" style="display:none;" />
+			<canvas id="texture2" style="display:none;" />
+			<canvas id="texture3" style="display:none;" />
+			<canvas id="texture4" style="display:none;" />
+			<canvas id="texture5" style="display:none;" />
+		</div>
+		
+		<!-- ViewMode 専用：隠し画像-->
+		<img id="textureImage0" style="display:none;" />
+		<img id="textureImage1" style="display:none;" />
+		<img id="textureImage2" style="display:none;" />
+		<img id="textureImage3" style="display:none;" />
+		<img id="textureImage4" style="display:none;" />
+		<img id="textureImage5" style="display:none;" />
+		<!--
+		<img id="textureImage0" style="" />
+		<img id="textureImage1" style="" />
+		<img id="textureImage2" style="" />
+		<img id="textureImage3" style="" />
+		<img id="textureImage4" style="" />
+		<img id="textureImage5" style="" />
+		-->
+		
+		<!-- 隠しキャンバス(サムネイル作成用) -->
+		<canvas id="thumb" style="display:none;" />
+		<!--<canvas id="thumb" style="" />-->
+	</div>
+
+	<div class="editModeElement">
+		<!-- ============================ step4 ============================ -->
+		<br/>
+		<span class="badge badge-success">Step.4 保存</span>
+		<div id="step4" style="">
+			<button id="saveLocal" class="btn btn-large btn-primary" type="button" style="width:39%; margin-bottom:4px;" disabled>
+				<i class="icon-folder-open icon-white" />
+				保存
+			</button>
+			<button id="upload" class="btn btn-large btn-inverse" type="button" style="width:59%; margin-bottom:4px;" disabled>
+				<i class="icon-arrow-up icon-white" />
+				アップロード
+			</button>
+		</div>
+	</div>
+	<textarea id="jsonPreview" style="width:95%;" rows="1"></textarea>
+
+</div>

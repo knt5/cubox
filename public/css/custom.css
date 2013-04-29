@@ -1,0 +1,80 @@
+/* ======================== bootstrap custom ======================== */
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-inner {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.navbar .nav.pull-right {
+	margin-top:2px;
+	margin-right:-32px;
+}
+
+.alert {
+	margin-bottom: 6px;
+}
+
+/* ======================== el ======================== */
+body {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+/* ======================== class ======================== */
+a.link {
+	cursor: pointer;
+}
+
+img.thumb {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 4px;
+}
+img.sample {
+	width: 50px;
+	height: 42px;
+}
+
+img.nav-logo {
+	width: 96px;
+	height: 34px;
+	min-width: 96px;
+	min-height: 34px;
+	margin-top: -8px;
+	margin-bottom: -8px;
+	margin-left: -32px;
+}
+
+div.container-fluid-body {
+	padding: 6px;
+}
+
+select.cuboids-sort {
+	width: 100px;
+}
+
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+div.preview {
+	positon: relative;
+	margin-left: -6px;
+	margin-right: -6px;
+}
+
+canvas.canvas {
+	position: absolute;
+	border:1px solid #333333;
+}
+
+/* ======================== id ======================== */
+
