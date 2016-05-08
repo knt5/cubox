@@ -10,4 +10,6 @@ JavaScript camera app to make a 3D cuboid model from 2 photos
 
 Demo : http://knt5lab.appspot.com/cubox/
 
-![screen shot](capture.png)
+![screen shot 1](screenshots/1.jpg)
+
+![screen shot 2](screenshots/2.jpg)
