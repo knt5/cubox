@@ -10,7 +10,7 @@ JavaScript camera app to make 3D cuboid model from 2 photos without WebGL and an
 
 ## Demo
 
-http://knt5lab.appspot.com/cubox/
+➔ http://knt5lab.appspot.com/cubox/
 
 ## Screenshots
 
