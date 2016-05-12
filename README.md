@@ -1,14 +1,18 @@
-cubox
-=====
+# cubox
 
-JavaScript camera app to make a 3D cuboid model from 2 photos
-(docs : 
-[en](http://knt5lab.appspot.com/software/cubox/pdf/intro-en.pdf) / 
-[ja](http://knt5lab.appspot.com/software/cubox/pdf/intro-ja.pdf) / 
-[detail](http://knt5lab.appspot.com/software/cubox/pdf/20130608_BuildersHUB.pdf)
-)
+JavaScript camera app to make 3D cuboid model from 2 photos without WebGL and any servers' power.
 
-Demo : http://knt5lab.appspot.com/cubox/
+## Documentation
+
+* [Summary (English)](http://knt5lab.appspot.com/software/cubox/pdf/intro-en.pdf)
+* [Summary (Japanese)](http://knt5lab.appspot.com/software/cubox/pdf/intro-ja.pdf)
+* [Detail (Japanese)](http://knt5lab.appspot.com/software/cubox/pdf/20130608_BuildersHUB.pdf)
+
+## Demo
+
+http://knt5lab.appspot.com/cubox/
+
+## Screenshots
 
 ![screen shot 1](screenshots/1.jpg)
 
